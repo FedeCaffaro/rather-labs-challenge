@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwiki.ratherlabs.com%2Fsign-in&psig=AOvVaw3P_1XpZcCTzjGimcJ_fKAr&ust=1687580092268000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCtsvHD2P8CFQAAAAAdAAAAABAE" alt="Logo">
+<img src="logoRatherLabs.png" alt="Logo">
 
   <h3 align="center">RatherLabs Challenge</h3>
 
@@ -53,7 +53,7 @@ To run this app on your pc, you need to:
   - `$ npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<ALCHEMY_API_KEY>`
 
 - on a separate terminal, run the unit tests that replicate a full user flow to join liquidity program.
-  - `npx hardhat test --network localhost `
+  - `$ npx hardhat test --network localhost `
 
 ## Authors
 
