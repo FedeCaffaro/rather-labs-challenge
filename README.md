@@ -1,46 +1,63 @@
-# Advanced Sample Hardhat Project
+# RatherLabs-challenge
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+<br />
+<p align="center">
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwiki.ratherlabs.com%2Fsign-in&psig=AOvVaw3P_1XpZcCTzjGimcJ_fKAr&ust=1687580092268000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOCtsvHD2P8CFQAAAAAdAAAAABAE" alt="Logo">
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+  <h3 align="center">RatherLabs Challenge</h3>
 
-Try running some of the following tasks:
+  <p align="center">
+    This project consists of building a contract that encapsulates all the transactions needed to join and stake SushiSwap liquidity program for both MasterchefV1 and MasterchefV2.
+    <br />
+    <br />
+    <a href="https://github.com/FedeCaffaro/rather-labs-challenge/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/FedeCaffaro/rather-labs-challenge/issues">Request Feature</a>
+  </p>
+</p>
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+## Built With
 
-# Etherscan verification
+- Hardhat 2.15.0
+- Typescript 4.9.5
+- Ethers 5.7.2
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+<!-- INSTALLATION -->
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+## Usage
 
-```shell
-hardhat run --network ropsten scripts/deploy.ts
-```
+To run this app on your pc, you need to:
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+- clone this repo:
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+  - Clone with SSH:
 
-# Performance optimizations
+  ```
+   git@github.com:FedeCaffaro/rather-labs-challenge.git
+  ```
 
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+  - Clone with HTTPS
+
+  ```
+    https://github.com/FedeCaffaro/rather-labs-challenge.git
+  ```
+
+- run npm in order to install all the packages
+
+  - `$ npm install`
+
+- then, create a .env file following the .env.example. You will need to add your alchemy key , which you can get at https://www.alchemy.com/. If you want to output a gas report on each transaction and contract deployment you will need a coinmarketcap api key which you can get at https://coinmarketcap.com/api/ .
+
+- This contract interacts with already deployed Sushiswap / Uniswap contract on ethereum mainnet. To replicate this you will need to run a node on the hardhat network forking ethereum mainnet, where ALCHEMY_API_KEY is the ethereum mainnet alchemy key.
+
+  - `$ npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<ALCHEMY_API_KEY>`
+
+- on a separate terminal, run the unit tests that replicate a full user flow to join liquidity program.
+  - `npx hardhat test --network localhost `
+
+## Authors
+
+👤 **Federico Caffaro**
+
+- Github: [FedeCaffaro](https://github.com/FedeCaffaro)
+- LinkedIn: [Federico Caffaro](https://www.linkedin.com/in/fredcc/)
